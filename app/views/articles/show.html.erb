@@ -1,0 +1,19 @@
+<h1 class="text-center">Article</h1>
+<hr>
+<div >
+<h2><%= @article.title %></h2>
+<%= link_to edit_article_path do %>
+<i class="fa fa-pencil"></i>
+<% end %>
+
+<%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" }  do %>
+<i class="fa fa-trash-o"></i>
+<% end %>
+
+</div>
+
+<p class="text-center"><%= @article.content %></p>
+<br>
+<h4 class="text-center">
+<%= link_to "Retour aux sources", articles_path %>
+</h4>
